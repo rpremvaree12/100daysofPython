@@ -24,6 +24,7 @@ lives = 6
 chosen_word = random.choice(word_list).lower()
 word_length = len(chosen_word)
 print("chosen word is",chosen_word)
+print(hangman_art.logo)
 
 # create a list of empty blanks for every letter in the chosen word
 display = []
@@ -33,26 +34,36 @@ for c in chosen_word:
 
 # play the game until end game is triggered - 0 lives or no blanks
 end_of_game = False
+guessed_letters = ""
 while not end_of_game:
     guess = input("Guess a letter\n").lower()
-    found = False
+    found_letter = False
+
+    if guess not in guessed_letters:
+        guessed_letters += guess
+
+        for pos in range(word_length):
+            if chosen_word[pos] == guess:
+                display[pos] = guess
+                found_letter = True
     
-    for pos in range(word_length):
-        if chosen_word[pos] == guess:
-            display[pos] = guess
-            found = True
-    
-    if found == False:
-        lives -= 1
-    
+        if found_letter == False:
+            lives -= 1
+            print(f"Sorry. {guess} is not in the word. You lost a life. {lives} lives left.")
+        
+        # show ASCII art based on their current lives
+        print(hangman_art.stages[lives])
+
+    else:
+        print(f"You've already guessed the letter {guess}. Try again.")
+
+    # display the blanks and already guessed letters
     print(" ".join(display))
-    # show ASCII art based on their current lives
-    print(hangman_art.stages[lives])
 
     if "_" not in display or lives == 0:
         end_of_game = True
     
 if lives == 0:
-    print("You lose")
+    print(f"No more lives left. You lose. The word was {chosen_word}")
 else:
     print("You win!")
