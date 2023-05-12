@@ -4,17 +4,9 @@
 # if the user wants to continue, they will chain an operation to the previous result.
 import art
 
-print(art.logo)
-print("Welcome to the Python Command Line Calculator.")
-# operations ={
-#     "+": add(first_num,next_num),
-#     "-": sub(first_num,next_num),
-#     "*": mult(first_num,next_num),
-#     "/": div(first_num,next_num)
-# }
-
 def add(num1,num2):
     return num1 + num2
+
 def sub(num1,num2):
     return num1 - num2
 
@@ -24,11 +16,32 @@ def mult(num1,num2):
 def div(num1,num2):
     return num1 / num2
 
+
+print(art.logo)
+print("Welcome to the Python Command Line Calculator.")
+operations ={
+    "+": add,
+    "-": sub,
+    "*": mult,
+    "/": div
+}
+
+
 calc_end = False
+
 first_num = float(input("What's the first number in your calculation? "))
 op = input("Pick an operation: ")
 next_num = float(input("What's the next number in the calculation? "))
+result = operations[op](first_num, next_num)
 
-print(f"{first_num} {op} {next_num} = {operations[op]}")
+print(f"{first_num} {op} {next_num} = {result}")
+
+while not calc_end:
+    cont = input("Would you like to continue? 'y' for yes 'n' for no.")
+    if cont == "y":
+        first_num = result
+        next_num = float(input("What's the next number in the calculation? "))
+
+
 
 
