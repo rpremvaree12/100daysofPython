@@ -79,15 +79,17 @@ def make_drink(bev):
         return False
 
 operating = True
-
+money = 0
 while operating:
     bev = input("Would you like an espresso, latte or cappuccino? ").lower()
     if bev == "report":
         report()
     elif bev == "off":
         operating = False
-    elif collect_money() - MENU[bev]["cost"] > 0:
-        make_drink(bev)
-        print("")
-    else:
-        print("Sorry, you don't have enough money.")
+    elif bev in MENU:
+        total = collect_money()
+        if total - MENU[bev]["cost"] > 0:
+            make_drink(bev)
+            print(f"Here's your change! ${round(total - MENU[bev]['cost'],2)}")
+        else:
+            print("Sorry, you don't have enough money.")
