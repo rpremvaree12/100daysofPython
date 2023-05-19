@@ -9,11 +9,21 @@ coffee_maker = CoffeeMaker()
 menu = Menu()
 
 
-print(menu.get_items())
 
-bev = input("Would you like an espresso, latte or cappuccino? ").lower()
-# menu.find_drink(bev)
+print("Welcome to the Python Coffee Machine!")
 
-if bev == "report":
-    menu.report()
-    money_machine.report()
+bev = menu.find_drink(input(f"What would you like to order? {menu.get_items()}? "))
+
+operating = True
+
+while operating:
+    if bev == "report":
+        coffee_maker.report()
+        money_machine.report()
+    elif bev == "off":
+        operating = False
+    elif coffee_maker.is_resource_sufficient(menu.find_drink(bev)):
+        money_machine.process_coins()
+        coffee_maker.make_coffee(bev.name)
+    else:
+        operating = False
