@@ -14,14 +14,14 @@ print("Welcome to the Python Coffee Machine!")
 is_operating = True
 
 while is_operating:
-    bev = input(f"What would you like to order? {menu.get_items()}? ")
-    if bev == "report":
+    order = input(f"What would you like to order? {menu.get_items()}? ")
+    if order == "report":
         coffee_maker.report()
         money_machine.report()
-    elif bev == "off":
+    elif order == "off":
         is_operating = False
     else:
-        menu.find_drink(bev)
-        if coffee_maker.is_resource_sufficient(menu.find_drink(bev)):
-            money_machine.make_payment(menu.find_drink(bev).cost)
-            coffee_maker.make_coffee(menu.find_drink(bev))
+        bev = menu.find_drink(bev)
+        if coffee_maker.is_resource_sufficient(drink=):
+            money_machine.make_payment(drink.cost)
+            coffee_maker.make_coffee(drink)
