@@ -21,7 +21,6 @@ while is_operating:
     elif order == "off":
         is_operating = False
     else:
-        bev = menu.find_drink(bev)
-        if coffee_maker.is_resource_sufficient(drink=):
-            money_machine.make_payment(drink.cost)
+        drink = menu.find_drink(order)
+        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
             coffee_maker.make_coffee(drink)
