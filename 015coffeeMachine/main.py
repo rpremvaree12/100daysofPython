@@ -92,4 +92,4 @@ while operating:
             make_drink(bev)
             print(f"Here's your change! ${round(total - MENU[bev]['cost'],2)}")
         else:
-            print("Sorry, you don't have enough money.")
+            print("Sorry, you don't have enough money. Money Refunded.")
