@@ -25,10 +25,25 @@ my_button.pack(side="right")
 my_entry = tkinter.Entry(width=10)
 my_entry.pack(side="bottom")
 
+# text
+my_text = tkinter.Text(height=5, width =3)
 
+# scale
 
+# spinbox
 
+# checkbutton
 
+# radiobutton
+
+# list box
+
+# layout managers
+# pack
+# place - precise positioning with x and y
+# top left is 0,0
+# grid - name column and row number
+# relative to other widgets
 
 
 
