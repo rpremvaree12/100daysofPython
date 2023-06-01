@@ -45,6 +45,9 @@ while game_on:
         t.write(answer_state,font=("Arial", 12, "bold"))
     elif states_count >= 50 or answer_state == "End":
         game_on = False
+        missing_states = [s for s in state_names if s not in states_found]
+        missing_state_df = pd.DataFrame(missing_states)
+        missing_state_df.to_csv("./states_to_learn.csv")
     else:
         print("Not a state. Try again.")
 
