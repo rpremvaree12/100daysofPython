@@ -14,6 +14,7 @@ try:
 except FileNotFoundError:
     # open in write mode - creates a new file
     file = open("a_file.text","w")
+    file.write("Something")
     # except: just by itself - too broad
 except KeyError as error_message:
     # capture key error in variable
