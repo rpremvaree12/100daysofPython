@@ -1,5 +1,8 @@
 from turtle import Turtle, Screen
 import time
+
+#TODO: fix game
+
 screen = Screen()
 screen.setup(height=600, width=600)
 screen.bgcolor("black")

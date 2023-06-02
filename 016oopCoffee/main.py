@@ -1,4 +1,4 @@
-# refactor coffee machine into OOP
+# TODO: refactor coffee machine into OOP
 
 from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker

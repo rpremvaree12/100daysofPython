@@ -5,6 +5,8 @@
 # process coins
 # check if transaction is successful
 # make coffee - deduct resources
+
+#TODO: add in art
 MENU = {
     "espresso": {
         "ingredients": {

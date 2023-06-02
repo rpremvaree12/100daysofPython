@@ -2,6 +2,8 @@ from tkinter import *
 from tkinter import messagebox
 import pyperclip as clip
 import json
+
+#TODO - add search function for passwords
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate():
 
