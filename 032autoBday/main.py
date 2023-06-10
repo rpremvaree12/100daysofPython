@@ -1,17 +1,14 @@
 import smtplib
 import datetime as dt
+import random
 
-my_email = ""
-password = ""
+##################### Extra Hard Starting Project ######################
 
-# with smtplib.SMTP("smtp.gmail.com") as connection:
-#     # secure connection to email
-#     connection.starttls()
-#     connection.login(user=my_email,password=password)
-#     connection.sendmail(
-#         from_addr=my_email,
-#         to_addrs="",
-#         msg="Subject:Hello\n\nThis is the body of the email."
-#         )
+# 1. Update the birthdays.csv
 
-dt.datetime.now()
+# 2. Check if today matches a birthday in the birthdays.csv
+
+# 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
+
+# 4. Send the letter generated in step 3 to that person's email address.
+
