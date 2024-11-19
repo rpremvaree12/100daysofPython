@@ -3,6 +3,7 @@ import pandas as pd
 import random
 BACKGROUND_COLOR = "#B1DDC6"
 
+#TODO save progress
 
 # 2. Create new flash cards
 df = pd.read_csv("./data/french_words.csv")
