@@ -2,7 +2,7 @@ import random
 import json
 import art
 from game_data import data as game_data
-
+#TODO: add in real data
 with open("db.json","r") as database:
     db = json.load(database)
     high_scores ={
