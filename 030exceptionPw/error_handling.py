@@ -1,4 +1,4 @@
-# try: something that might cause an execetion
+# try: something that might cause an exception
 # except: do this if there was an exception
 # else: do this if there were no execeptions
 # finally: do this no matter what happens
