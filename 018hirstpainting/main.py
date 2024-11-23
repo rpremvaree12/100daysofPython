@@ -1,5 +1,3 @@
-###This code will not work in repl.it as there is no access to the colorgram package here.###
-##We talk about this in the video tutorials##
 import colorgram
 import turtle as t
 
@@ -7,9 +5,10 @@ tim = t.Turtle()
 tim.speed("fastest")
 t.colormode(255)
 my_screen = t.Screen()
+my_screen.setup(width=500,height=500)
 
 rgb_colors = []
-colors = colorgram.extract('hirst1.jpg', 30)
+colors = colorgram.extract('hirst1.jpg',72)
 for color in colors:
     r = color.rgb.r
     g = color.rgb.g
@@ -20,16 +19,15 @@ def draw_circle(x,y,color):
     tim.penup()
     tim.goto(x,y)
     tim.pendown()
+    tim.color(color)
     tim.fillcolor(color)
     tim.begin_fill()
-    tim.circle(50)
+    tim.circle(25)
     tim.end_fill()
 
-draw_circle(0,0,(255,0,0))
-
-for x in range(6):
-    for y in range(5):
-        print(x*5 + y)
-        draw_circle(x, y, rgb_colors[y + x*5])
-
+# print(len(rgb_colors))
+for y in range(6):
+    for x in range(12):
+        print(x+y*5)
+        # draw_circle(-250+x*100, -250+y*100, rgb_colors[y+x*5])
 my_screen.exitonclick()
