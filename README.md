@@ -5,23 +5,25 @@ This repo consists of the projects that I'm writing by following a Udemy Course 
 This readme is tracking my progress and including any new learnings here.
  
 ### Beginner
-- [ ] 001 band name generator
-- [ ] 002 tip calculator
+- [X] 001 band name generator
+- [X] 002 tip calculator
 - [ ] 003 choose your own adventure
-- [ ] 004 rock paper scissors
-- [ ] 005 password generator
+- [X] 004 rock paper scissors
+- [X] 005 password generator
 - [ ] 006 maze solver
-- [ ] 007 hangman
-- [ ] 008 caesar cipher encoding/decoding
-- [ ] 009 silent auction sim
-- [ ] 010 CLI calculator
-- [ ] 011 blackjack sim
-- [ ] 012 guess the number game
-- [ ] 013 
-- [ ] 014 higher or lower game
-- [ ] 015 coffee machine
+- [X] 007 hangman
+- [X] 008 caesar cipher
+- [X] 009 silent auction sim
+- [X] 010 CLI calculator
+- [X] 011 blackjack sim
+   - working on betting and double-down
+- [X] 012 guess the number game
+- [ ] 013 debugging
+- [X] 014 higher or lower game
+- [X] 015 coffee machine
 - [ ] 016 coffee machine with OOP
-- [ ] 017 quiz with OOP
+   - refactor to OOP
+- [X] 017 quiz with OOP
 
 ### Intermediate
 - [ ] 018 hirst painting

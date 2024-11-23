@@ -1,4 +1,5 @@
 """
+hangman
 1. chose a random word
 2. display how many letters in the word with blanks
 3. show how many guesses user has
